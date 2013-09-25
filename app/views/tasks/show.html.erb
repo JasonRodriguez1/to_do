@@ -1,0 +1,11 @@
+<h1><%= @task.description %></h1>
+
+<p> Duedate: <%= @task.duedate %></p>
+<p> Completed: <%= @task.completed %></p>
+
+<p><%= link_to 'Edit this task', edit_task_path(@task) %> </p>
+<p><%= link_to 'Delete this task',
+                @task,
+                :method => :delete,
+                :data => { :confirm => 'Are you sure broda?' } %></p>
+<p><%= link_to 'Return to list menu', @task.list %> </p>

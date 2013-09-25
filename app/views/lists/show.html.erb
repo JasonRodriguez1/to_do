@@ -1,0 +1,16 @@
+<h1><%= @list.name %></h1>
+
+<ul>
+  <% @list.tasks.each do |task| %>
+    <li><%= link_to task.description, edit_task_path(task) %></li>
+  <% end %>  
+</ul>  
+
+
+<p><%= link_to 'Edit this list', edit_list_path %> </p>
+<p><%= link_to 'Delete this list',
+                @list,
+                :method => :delete,
+                :data => { :confirm => 'Are you sure broda?' } %></p>
+<p><%= link_to 'New task', new_task_path(:list_id => @list.id) %></p>                 
+<p><%= link_to 'Return to List Index', lists_path, :class => 'btn btn-primary' %></p>
