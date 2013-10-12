@@ -1,0 +1,31 @@
+@import url(http://fonts.googleapis.com/css?family=Raleway+Dots);
+body
+{
+font-family: 'Raleway Dots', cursive;	
+background: url(list.jpg);
+background-size: 100%;
+background-repeat:no-repeat;
+}
+h1{
+  font-family: 'Raleway Dots', cursive;	
+}
+
+title {
+  font-family: 'Raleway Dots', cursive;
+  font-size: 3em;
+  color: black;
+}
+
+form {
+  display:inline;
+ }
+
+#top {
+  background-color: #FFC966;
+}
+
+#content {
+  background-color:rgba(255,255,255,0.75);
+  padding-right: 50%;
+  border-radius: 10px;
+}

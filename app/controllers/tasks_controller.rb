@@ -1,11 +1,4 @@
 class TasksController < ApplicationController
-  # def index
-  #   @tasks = Task.all
-  # end
-
-  def show
-    @task = Task.find(params[:id])
-  end   
 
   def new
     @task = Task.new(:list_id => params[:list_id])
@@ -20,6 +13,10 @@ class TasksController < ApplicationController
      render :new
     end
   end
+
+  def show
+    @task = Task.find(params[:id])
+  end   
 
   def edit
     @task = Task.find(params[:id])
@@ -38,7 +35,7 @@ class TasksController < ApplicationController
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
-    flash[:notice] = "Task deleted"
+    flash[:notice] = "Task removed"
     redirect_to @task.list
   end  
        

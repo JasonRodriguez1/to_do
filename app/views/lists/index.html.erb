@@ -1,9 +1,12 @@
 <h1>Lists</h1>
 <hr>
-<ul>
-  <% @lists.each do |list| %>
-    <li><%= link_to list.name, list %></li>
-  <% end %>
-</ul>
+<div class="container" id="content">
 
-<p><%= link_to 'Create new list', new_list_path(@list), :class => 'btn btn-primary' %> </p>
+  <% @lists.each do |list| %>
+    <%= link_to list.name, list %></br>
+  <% end %>
+
+<button class="btn btn-default btn-xs" style="float:right"><%= link_to 'New list', new_list_path(@list) %> </button>
+
+</div>
+

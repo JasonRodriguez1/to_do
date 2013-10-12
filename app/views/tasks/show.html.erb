@@ -3,9 +3,9 @@
 <p> Duedate: <%= @task.duedate %></p>
 <p> Completed: <%= @task.completed %></p>
 
-<p><%= link_to 'Edit this task', edit_task_path(@task) %> </p>
-<p><%= link_to 'Delete this task',
+<button class="btn btn-default btn-xs" style="float:left"><%= link_to 'Edit this task', edit_task_path(@task) %> </button>
+<button class="btn btn-default btn-xs" style="float:left"><%= link_to 'Delete this task',
                 @task,
                 :method => :delete,
-                :data => { :confirm => 'Are you sure broda?' } %></p>
-<p><%= link_to 'Return to list menu', @task.list %> </p>
+                :data => { :confirm => 'Are you sure broda?' } %></button>
+<button class="btn btn-default btn-xs" style="float:right"><%= link_to 'Return to list menu', @task.list %> </button>

@@ -1,22 +1,25 @@
 source 'https://rubygems.org'
-ruby '2.0.0'
 
-gem 'rails_12factor'
 gem 'rails'
 gem 'pg'
 gem 'sass-rails'
 gem 'uglifier'
 gem 'coffee-rails'
-gem 'jquery-rails'
+gem 'jquery-rails', "2.3.0"
 gem 'turbolinks'
 gem 'jbuilder'
-gem 'bootstrap-sass'
+gem 'bootstrap-sass', git: 'https://github.com/thomas-mcdonald/bootstrap-sass'
+gem 'validate_url'
+gem 'bcrypt-ruby', '~> 3.0.0'
 
-group :test, :development do
+group :development, :test do
   gem 'rspec-rails'
+  gem 'pry'
 end
 
 group :test do
   gem 'shoulda-matchers'
-end   
-
+  gem 'capybara'
+  gem 'factory_girl_rails'
+  gem 'launchy' 
+end
