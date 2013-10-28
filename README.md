@@ -2,4 +2,4 @@
 =======================
 
 This is a simple Task Organizer written in Rails. 
-coded by [Jason Rodriguez](http://jasonrodriguez.net/index.html).
+Coded by [Jason Rodriguez](http://jasonrodriguez.net/index.html).
